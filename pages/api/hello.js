@@ -1,5 +1,8 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import dbConnect from "../../utils/db";
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+dbConnect()
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default async (req, res) => {
+  res.json({ test: 'hello alexis' })
 }
